@@ -23,7 +23,7 @@ node {
         sh 'docker build -t gittest --no-cache .'
         sh 'docker tag gittest localhost:5000/gittest'
         sh 'docker push localhost:5000/gittest'
-		sh 'sudo docker rmi -f gittest localhost:5000/gittest'
+		sh 'docker rmi -f gittest localhost:5000/gittest'
       }
     }
 	stage('Production'){
